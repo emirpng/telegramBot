@@ -26,34 +26,7 @@ def websites(update, context):
                 requests.post(url='https://api.telegram.org/bot{0}/sendMessage'.format(token),data={'chat_id': chat_id, 'text':response}).json()
                 print(temp)
 
-def doviz():
-    url = requests.get("https://kur.doviz.com/serbest-piyasa")
-    if url.status_code == 200:
-        response = BeautifulSoup(url.content, "lxml")
-        dolar1 = response.select("body > header > div.header-secondary > div > div > div:nth-child(2) > a > span")[0]
-        dolar2 = response.select("body > header > div.header-secondary > div > div > div:nth-child(2) > a > span")[1]
 
-        response = BeautifulSoup(url.content, "lxml")
-        grm1 = response.select("body > header > div.header-secondary > div > div > div:nth-child(1) > a > span")[0]
-        grm2 = response.select("body > header > div.header-secondary > div > div > div:nth-child(1) > a > span")[1]
-
-        response = BeautifulSoup(url.content, "lxml")
-        eur1 = response.select("body > header > div.header-secondary > div > div > div:nth-child(3) > a > span")[0]
-        eur2 = response.select("body > header > div.header-secondary > div > div > div:nth-child(3) > a > span")[1]
-
-        response = BeautifulSoup(url.content, "lxml")
-        strl1 = response.select("body > header > div.header-secondary > div > div > div:nth-child(4) > a > span")[0]
-        strl2 = response.select("body > header > div.header-secondary > div > div > div:nth-child(4) > a > span")[1]
-
-        dolarA = str(dolar1.text)
-        dolarB = str(dolar2.text)
-
-        EUR = str(eur1.text)
-        EUR2 = str(eur2.text)
-        GRML = str(grm1.text)
-        GRML2 = str(grm2.text)
-        STRL = str(strl1.text)
-        STRL2 = str(strl2.text)
 
 
 def idT(update, context):
