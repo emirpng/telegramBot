@@ -24,7 +24,7 @@ def websites(update, context):
         while True:
             if veri != temp:
                 temp = veri
-                requests.post(url='https://api.telegram.org/bot{0}/sendMessage'.format(token),data={'chat_id': chat_id, 'text':response}).json()
+                requests.post(url='https://api.telegram.org/bot{0}/sendMessage'.format(token),data={'chat_id': -1001710292871, 'text':response}).json()
                 print(temp)
 
 
