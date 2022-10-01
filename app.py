@@ -11,7 +11,7 @@ token = "5493744538:AAF3LK8_bhr7tae-oadwjpEBNI--zmDUSoc"
 def websites(update, context):
     chat_id = update.message.chat_id
     update.message.reply_text("bot kullanılmaya hazır")
-    url = requests.get("http://sondakika.haber7.com/sondakika.rss")
+    url = requests.get("https://www.ntv.com.tr/son-dakika.rss")
     if url.status_code == 200:
         soup = BeautifulSoup(url.content, "lxml")
         title = soup.select("channel > item > title")[0]
