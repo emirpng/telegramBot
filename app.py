@@ -1,6 +1,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import bot
 import requests
+import lxml
 from bs4 import BeautifulSoup
 
 token = "5493744538:AAF3LK8_bhr7tae-oadwjpEBNI--zmDUSoc"
