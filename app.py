@@ -11,13 +11,13 @@ token = "5493744538:AAF3LK8_bhr7tae-oadwjpEBNI--zmDUSoc"
 def websites(update, context):
     chat_id = update.message.chat_id
     update.message.reply_text("bot kullanılmaya hazır")
-    url = requests.get("https://www.webtekno.com/rss.xml")
+    url = requests.get("http://sondakika.haber7.com/sondakika.rss")
     if url.status_code == 200:
         soup = BeautifulSoup(url.content, "lxml")
         title = soup.select("channel > item > title")[0]
         url = soup.select("channel > item > guid")[0]
         id_ = soup.select("channel > item > pubDate")[0]
-        response = "Webtekno yeni bir haber paylaştı!" + "\n\n" + " " + str(title.text) + "\n\n" + " " + str(url.text)
+        response = "Yeni bir haber paylaştı!" + "\n\n" + " " + str(title.text) + "\n\n" + " " + str(url.text)
         temp = None
         veri = title.text
 
