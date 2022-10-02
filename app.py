@@ -58,7 +58,7 @@ class getLastNews(object):
 
 lastContentHaberler = getLastNews(url="https://rss.haberler.com/rss.asp", news_address="Haberler.com")
 lastContentSondakika = getLastNews(url="http://rss.sondakika.com/rss.asp", news_address="Sondakika.com")
-lastContentHurriyet = getLastNews(url="https://rss.haberturk.com/rss.asp", news_address="Haberturk.com")
+lastContentHurriyet = getLastNews(url="https://rss.trthaber.com/rss.asp", news_address="Trthaber.com")
 lastContentSabah = getLastNews(url="https://rss.ensonhaber.com/rss.asp", news_address="Ensonhaber.com")
 
 if __name__ == "__main__":
