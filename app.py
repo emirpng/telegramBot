@@ -33,7 +33,7 @@ class getLastNews(object):
             getLastTopic = parse_json["rss"]["channel"]["item"][0]
             getLastTitle = getLastTopic[title]
             getLastImage = getLastTopic[image][image_url]
-            getLastContent = getLastTopic[caption][0:300]
+            getLastContent = getLastTopic[caption][0:700]
             return getLastContent, getLastTitle, getLastImage
 
     def News(self) -> str:
