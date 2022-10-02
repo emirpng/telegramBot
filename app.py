@@ -46,7 +46,7 @@ class getLastNews(object):
             try:
                 lastContent, lastTitle, ImageUrl = self.getLastContent(url=self.url, title="title", caption="description", image="media:content", image_url="@url")
                 if lastContent is not None and  lastTitle is not None and ImageUrl is not None:
-                    send_content = f"{lastContent}\n\nKaynak : | {self.newsAddress} |"
+                    send_content = f"{lastContent}"
                     if lastTitle != last:
                         last = lastTitle
                         self.sendPhotoFromTg(token=bot_token, chat=channelId, caption=send_content, photo=ImageUrl)
@@ -63,3 +63,4 @@ lastContentHurriyet = getLastNews(url="http://rss.hurriyet.com.tr/rss.asp", news
 if __name__ == "__main__":
     Thread(target=lastContentSondakika.News, args=()).start()
     Thread(target=lastContentHaberler.News, args=()).start()
+    Thread(target=lastContentHurriyet.News, args=()).start()
