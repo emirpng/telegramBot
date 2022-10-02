@@ -46,7 +46,7 @@ class getLastNews(object):
             try:
                 lastContent, lastTitle, ImageUrl = self.getLastContent(url=self.url, title="title", caption="description", image="media:content", image_url="@url")
                 if lastContent is not None and  lastTitle is not None and ImageUrl is not None:
-                    send_content = f"{lastContent}"
+                    send_content = f"{lastTitle}\n\n{lastContent}"
                     if lastTitle != last:
                         last = lastTitle
                         self.sendPhotoFromTg(token=bot_token, chat=channelId, caption=send_content, photo=ImageUrl)
