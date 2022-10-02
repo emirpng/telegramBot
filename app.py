@@ -59,7 +59,7 @@ class getLastNews(object):
 lastContentHaberler = getLastNews(url="https://rss.haberler.com/rss.asp", news_address="Haberler.com")
 lastContentSondakika = getLastNews(url="http://rss.sondakika.com/rss.asp", news_address="Sondakika.com")
 lastContentHurriyet = getLastNews(url="http://rss.hurriyet.com.tr/rss.asp", news_address="Hurriyet.com.tr")
-lastContentSabah = getLastNews(url="https://www.sabah.com.tr/rss/anasayfa.xml", news_address="Sabah.com.tr")
+lastContentSabah = getLastNews(url="https://www.sabah.com.tr/rss.asp", news_address="Sabah.com.tr")
 
 if __name__ == "__main__":
     Thread(target=lastContentSondakika.News, args=()).start()
